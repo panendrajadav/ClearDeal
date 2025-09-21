@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+ClearDeal
 
-## Project info
+ClearDeal is a decentralized freelance marketplace built on Arbitrum that ensures secure, transparent, and trustless job contracts between clients and freelancers. Unlike traditional platforms with high fees and centralized control, ClearDeal leverages blockchain technology to provide low-cost, automated, and fair transactions.
 
-**URL**: https://lovable.dev/projects/a6ba698b-67ab-4c98-9c71-0245930f851d
+🚀 Features
 
-## How can I edit this code?
+Decentralized Job Contracts – No middleman, only blockchain smart contracts.
 
-There are several ways of editing your application.
+Low Transaction Fees – Powered by Arbitrum for scalability and affordability.
 
-**Use Lovable**
+Escrow Mechanism – Funds are securely locked until work submission and approval.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a6ba698b-67ab-4c98-9c71-0245930f851d) and start prompting.
+Dual Portal System
 
-Changes made via Lovable will be committed automatically to this repo.
+Client Portal – Post jobs, review freelancers, and release payments.
 
-**Use your preferred IDE**
+Freelancer Portal – Apply for jobs, submit work, and get paid securely.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Rating & Reputation System – Build trust with verified performance history.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Wallet Integration – Connect with MetaMask or any Web3 wallet.
 
-Follow these steps:
+Smooth UI/UX – Professional design inspired by Amazon-style navigation.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🛠 Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Frontend: ReactJS (Vite) + TailwindCSS
+Blockchain: Arbitrum Sepolia (Ethereum L2)
+Smart Contract: Solidity (ClearDealETH)
+Wallet Connection: Wagmi + MetaMask
+Backend (Optional): Python (for APIs & indexing, if needed)
+State Management: Temporary state (demo) / Redux for scale
+UI/UX: Responsive, clean, and user-friendly
 
-# Step 3: Install the necessary dependencies.
-npm i
+🔄 Workflow
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Landing Page
 
-**Edit a file directly in GitHub**
+ClearDeal logo + “Get Started” button
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Client Flow
 
-**Use GitHub Codespaces**
+Connect wallet → Post job → Lock funds in smart contract (escrow) → Freelancer applies → Client selects → Work submission → Client releases funds → Job completed
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Freelancer Flow
 
-## What technologies are used for this project?
+Connect wallet → Browse jobs → Apply → On acceptance → Submit work → Receive funds
 
-This project is built with:
+Transaction Flow
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Every transaction (posting, applying, payment) goes through Arbitrum Smart Contracts
 
-## How can I deploy this project?
+Escrow ensures no party can cheat
 
-Simply open [Lovable](https://lovable.dev/projects/a6ba698b-67ab-4c98-9c71-0245930f851d) and click on Share -> Publish.
+📸 Screenshots (Planned UI)
 
-## Can I connect a custom domain to my Lovable project?
+Landing Page – Logo + Connect Wallet
 
-Yes, you can!
+Client Dashboard – Post jobs, review applications
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Freelancer Dashboard – Apply, chat, submit work
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Transaction Modal – Gas fee details, escrow lock/unlock
+
+📂 Project Structure
+cleardeal/
+│── contracts/        # Solidity smart contracts
+│── frontend/         # ReactJS (Vite + TailwindCSS)
+│── backend/ (opt)    # Python server (optional for APIs)
+│── public/           # Static assets
+│── README.md         # Project documentation
+
+📜 Smart Contract (Simplified)
+
+createJob() → Client posts job with deposit
+
+applyJob() → Freelancer applies
+
+selectFreelancer() → Client assigns freelancer
+
+submitWork() → Freelancer submits
+
+releasePayment() → Funds released on approval
+
+🌐 Deployment
+
+Blockchain: Arbitrum Sepolia Testnet
+
+Frontend: Vercel / Netlify
+
+Smart Contract Verification: Etherscan (Arbiscan for Sepolia)
+
+📊 Future Improvements
+
+AI-powered freelancer matching
+
+Milestone-based payments
+
+Dispute resolution system
+
+Mobile app (React Native)
+
+DAO governance for fee structure
