@@ -62,14 +62,6 @@ Freelancer Dashboard – Apply, chat, submit work
 
 Transaction Modal – Gas fee details, escrow lock/unlock
 
-📂 Project Structure
-cleardeal/
-│── contracts/        # Solidity smart contracts
-│── frontend/         # ReactJS (Vite + TailwindCSS)
-│── backend/ (opt)    # Python server (optional for APIs)
-│── public/           # Static assets
-│── README.md         # Project documentation
-
 📜 Smart Contract (Simplified)
 
 createJob() → Client posts job with deposit
